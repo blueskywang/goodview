@@ -1,33 +1,45 @@
 package com.bluesky.localhost.justforview;
 
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
+import com.bluesky.localhost.justforview.base.BaseActivity;
+import com.bluesky.localhost.justforview.base.activityname;
 import com.bluesky.localhost.justforview.interfa.onChildClick;
-import com.bluesky.localhost.justforview.newview.SubButton;
 import com.bluesky.localhost.justforview.newview.floatingmenu;
 
-public class MainActivity extends AppCompatActivity {
-     private floatingmenu floatingmen;
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
+public class MainActivity extends BaseActivity {
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
+    private floatingmenu floatingmen;
+    private final String a = "cloudmusicActivity";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-         floatingmen=(floatingmenu)findViewById(R.id.floatingmenu);
-        floatingmen.setPosition(floatingmenu.RIGHT_TOP);
+        ButterKnife.bind(this);
+        setSupportActionBar(toolbar);
+        floatingmen = (floatingmenu) findViewById(R.id.floatingmenu);
         floatingmen.setLayout(floatingmenu.Circle_Layout);
         floatingmen.setDistanct(200);
 
         floatingmen.setOnChildClick(new onChildClick() {
             @Override
             public void OnClildClick(int positon) {
-                Toast.makeText(getApplicationContext(),positon+" is view",Toast.LENGTH_SHORT).show();
+                if (positon == 0) {
+                  /*  Intent intent=new Intent();
+                    intent.setClass(getApplicationContext(),cloudmusicActivity.class);
+                    startActivity(intent);*/
+                    Intent intent = new Intent();
+                    navitatoTo(activityname.getAcitvityName(a), intent);
+                }
             }
         });
 
@@ -39,9 +51,10 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
 
             case R.id.distanct:
                 floatingmen.setDistanct(300);

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+    </android.support.v7.widget.Toolbar>
+  <ImageView
+    android:id="@+id/singer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" />
+
+  <RelativeLayout
+        android:layout_below="@+id/toolbar"
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/topdistanct">
+    <ImageView
+        android:orientation="horizontal"
+        android:id="@+id/line"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/line"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"></ImageView>
+    </RelativeLayout>
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="350dp"
+      android:layout_below="@+id/line1"
+      android:layout_alignParentStart="true">
+    <!--<ImageView
+        android:src="@mipmap/a9w"
+        android:layout_width="@dimen/cloudmusic"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_height="@dimen/cloudmusic"
+        android:id="@+id/imageView2" />
+      &lt;!&ndash;android:layout_below="@+id/line1"
+        如果下面的view有这个属性 那么在Java设置line的高度的话会无效&ndash;&gt;
+      <ImageView
+          android:src="@mipmap/a9x"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/imageView"
+          android:layout_centerVertical="true"
+          android:layout_centerHorizontal="true" />-->
+    <com.bluesky.localhost.justforview.newview.rotationImageview
+        android:layout_width="wrap_content"
+        android:id="@+id/Rotationimage"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/forc"
+        android:layout_marginTop="-70dp"
+        android:layout_height="wrap_content" />
+      <ImageView
+          android:id="@+id/forc"
+          android:src="@mipmap/aag"
+          android:layout_width="90dp"
+          android:layout_height="150dp"
+          android:layout_alignParentTop="true"
+          android:layout_marginTop="-28dp"
+          android:layout_centerHorizontal="true"
+          android:layout_alignEnd="@+id/Rotationimage"
+          android:layout_marginEnd="30dp" />
+  </RelativeLayout>
+</RelativeLayout>
