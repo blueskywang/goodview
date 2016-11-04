@@ -65,8 +65,8 @@ public class cloudmusicActivity extends BaseActivity {
         imageh = dm.heightPixels;
         imagew += 100;
         imageh += 100;
-        setSupportActionBar(toolbar);
         ButterKnife.bind(this);
+        setSupportActionBar(toolbar);
         toolbar.setAlpha(0f);
        /* setRotateAnimation(imageView2);*/
       /* singer.post(new Runnable() {

@@ -16,8 +16,30 @@
         <attr name="distanct" format="dimension"></attr>
     </declare-styleable>
     <declare-styleable name="SubButton">
-     <attr name="subbuttonsize" format="dimension"></attr>
-     <attr name="subbuttonIron" format="reference"></attr>
+        <attr name="subbuttonsize" format="dimension"></attr>
+        <attr name="subbuttonIron" format="reference"></attr>
         <attr name="subbuttoncolor" format="color"></attr>
+    </declare-styleable>
+    <attr name="Xfermode_mode">
+        <enum name="clear" value="0"></enum>
+        <enum name="src" value="1"></enum>
+        <enum name="dst" value="2"></enum>
+        <enum name="srcover" value="3"></enum>
+        <enum name="dstover" value="4"></enum>
+        <enum name="srcln" value="5"></enum>
+        <enum name="dstin" value="6"></enum>
+        <enum name="srcout" value="7"></enum>
+        <enum name="dstout" value="8"></enum>
+        <enum name="srcatop" value="9"></enum>
+        <enum name="dstatop" value="10"></enum>
+        <enum name="xor" value="11"></enum>
+        <enum name="draken" value="12"></enum>
+        <enum name="lighten" value="13"></enum>
+        <enum name="multiply" value="14"></enum>
+        <enum name="screen" value="15"></enum>
+
+    </attr>
+    <declare-styleable name="XfermodeView">
+        <attr name="Xfermode_mode"></attr>
     </declare-styleable>
 </resources>

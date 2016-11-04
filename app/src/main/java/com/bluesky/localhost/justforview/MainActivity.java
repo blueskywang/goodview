@@ -40,6 +40,11 @@ public class MainActivity extends BaseActivity {
                     Intent intent = new Intent();
                     navitatoTo(activityname.getAcitvityName(a), intent);
                 }
+                if(positon==1){
+                    Intent intentd=new Intent();
+                    navitatoTo(activityname.getAcitvityName("activity.XfermodeActivity"),intentd);
+
+                }
             }
         });
 
